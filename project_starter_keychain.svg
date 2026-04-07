@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#eef6f9"/>
+  <rect x="70" y="70" width="1060" height="660" rx="34" fill="#ffffff" stroke="#d5e4eb" stroke-width="6"/>
+  <text x="110" y="135" font-family="Segoe UI, Arial, sans-serif" font-size="42" fill="#15384d" font-weight="700">Starter Keychain</text>
+  <text x="110" y="178" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#617481">A small beginner project using line, circle, trim, and text.</text>
+  <path d="M305 295 h280 a85 85 0 0 1 0 170 h-280 a85 85 0 0 1 0 -170 z" fill="#dff1f7" stroke="#2d6d86" stroke-width="10"/>
+  <circle cx="370" cy="380" r="34" fill="#ffffff" stroke="#2d6d86" stroke-width="8"/>
+  <text x="455" y="395" font-family="Segoe UI, Arial, sans-serif" font-size="56" fill="#2d6d86" font-weight="700">A</text>
+  <text x="250" y="560" font-family="Segoe UI, Arial, sans-serif" font-size="26" fill="#5f7281">Outer shape + hole + initials</text>
+  <rect x="760" y="255" width="270" height="300" rx="24" fill="#f8fbfd" stroke="#d7e7ee" stroke-width="4"/>
+  <text x="795" y="315" font-family="Segoe UI, Arial, sans-serif" font-size="30" fill="#1c5772" font-weight="700">Project flow</text>
+  <text x="795" y="370" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#5f7281">1. Draw outer shape</text>
+  <text x="795" y="415" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#5f7281">2. Add hole circle</text>
+  <text x="795" y="460" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#5f7281">3. Trim extras</text>
+  <text x="795" y="505" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#5f7281">4. Add initials</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760">
+  <rect width="1280" height="760" fill="#1e262e"/>
+  <rect x="30" y="30" width="1220" height="700" rx="28" fill="#111c25"/>
+  <g stroke="#24394a" stroke-width="1">
+    <path d="M80 100H1200"/><path d="M80 150H1200"/><path d="M80 200H1200"/><path d="M80 250H1200"/><path d="M80 300H1200"/><path d="M80 350H1200"/><path d="M80 400H1200"/><path d="M80 450H1200"/><path d="M80 500H1200"/><path d="M80 550H1200"/><path d="M80 600H1200"/><path d="M80 650H1200"/>
+    <path d="M120 70V690"/><path d="M180 70V690"/><path d="M240 70V690"/><path d="M300 70V690"/><path d="M360 70V690"/><path d="M420 70V690"/><path d="M480 70V690"/><path d="M540 70V690"/><path d="M600 70V690"/><path d="M660 70V690"/><path d="M720 70V690"/><path d="M780 70V690"/><path d="M840 70V690"/><path d="M900 70V690"/><path d="M960 70V690"/><path d="M1020 70V690"/><path d="M1080 70V690"/><path d="M1140 70V690"/>
+  </g>
+  <path d="M250 570 V220 H830 V420 H1010 V570 Z" fill="none" stroke="#e8edf2" stroke-width="12"/>
+  <path d="M830 420 H1010" stroke="#7fd1aa" stroke-width="12"/>
+  <path d="M250 390 H460" stroke="#7fd1aa" stroke-width="12"/>
+  <path d="M640 220 V390" stroke="#7fd1aa" stroke-width="12"/>
+  <rect x="312" y="272" width="174" height="92" rx="10" fill="none" stroke="#57c5ff" stroke-width="8"/>
+  <rect x="696" y="282" width="152" height="78" rx="10" fill="none" stroke="#57c5ff" stroke-width="8"/>
+  <rect x="866" y="466" width="98" height="44" rx="8" fill="none" stroke="#f6c262" stroke-width="7"/>
+  <text x="304" y="648" fill="#d7e2ea" font-size="28" font-family="Segoe UI, Arial, sans-serif">Room layout project with walls, doors, windows, and furniture blocks</text>
+</svg>

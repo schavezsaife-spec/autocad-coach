@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760">
+  <rect width="1280" height="760" fill="#202830"/>
+  <rect x="18" y="18" width="1244" height="724" rx="24" fill="#29333d"/>
+  <rect x="18" y="18" width="1244" height="50" rx="24" fill="#1b2229"/>
+  <circle cx="54" cy="43" r="8" fill="#f08f7a"/>
+  <circle cx="78" cy="43" r="8" fill="#e4c46a"/>
+  <circle cx="102" cy="43" r="8" fill="#7fd1aa"/>
+  <text x="142" y="49" fill="#b8c4cf" font-size="22" font-family="Segoe UI, Arial, sans-serif">AutoCAD Coach | ARRAY + DIMENSIONS</text>
+  <rect x="44" y="98" width="1192" height="604" rx="22" fill="#0f1922"/>
+  <g stroke="#203647" stroke-width="1">
+    <path d="M84 138H1196"/>
+    <path d="M84 188H1196"/>
+    <path d="M84 238H1196"/>
+    <path d="M84 288H1196"/>
+    <path d="M84 338H1196"/>
+    <path d="M84 388H1196"/>
+    <path d="M84 438H1196"/>
+    <path d="M84 488H1196"/>
+    <path d="M84 538H1196"/>
+    <path d="M84 588H1196"/>
+    <path d="M84 638H1196"/>
+    <path d="M144 118V678"/>
+    <path d="M204 118V678"/>
+    <path d="M264 118V678"/>
+    <path d="M324 118V678"/>
+    <path d="M384 118V678"/>
+    <path d="M444 118V678"/>
+    <path d="M504 118V678"/>
+    <path d="M564 118V678"/>
+    <path d="M624 118V678"/>
+    <path d="M684 118V678"/>
+    <path d="M744 118V678"/>
+    <path d="M804 118V678"/>
+    <path d="M864 118V678"/>
+    <path d="M924 118V678"/>
+    <path d="M984 118V678"/>
+    <path d="M1044 118V678"/>
+    <path d="M1104 118V678"/>
+  </g>
+  <g fill="none" stroke="#57c5ff" stroke-width="7">
+    <rect x="258" y="302" width="60" height="60" rx="6"/>
+    <rect x="372" y="302" width="60" height="60" rx="6"/>
+    <rect x="486" y="302" width="60" height="60" rx="6"/>
+    <rect x="600" y="302" width="60" height="60" rx="6"/>
+  </g>
+  <g fill="none" stroke="#f6c262" stroke-width="5">
+    <line x1="258" y1="436" x2="318" y2="436"/>
+    <line x1="372" y1="436" x2="432" y2="436"/>
+    <line x1="486" y1="436" x2="546" y2="436"/>
+    <line x1="600" y1="436" x2="660" y2="436"/>
+    <line x1="258" y1="452" x2="258" y2="420"/>
+    <line x1="318" y1="452" x2="318" y2="420"/>
+    <line x1="372" y1="452" x2="372" y2="420"/>
+    <line x1="432" y1="452" x2="432" y2="420"/>
+    <line x1="486" y1="452" x2="486" y2="420"/>
+    <line x1="546" y1="452" x2="546" y2="420"/>
+    <line x1="600" y1="452" x2="600" y2="420"/>
+    <line x1="660" y1="452" x2="660" y2="420"/>
+  </g>
+  <text x="281" y="474" fill="#d7e2ea" font-size="18" font-family="Segoe UI, Arial, sans-serif">60</text>
+  <text x="395" y="474" fill="#d7e2ea" font-size="18" font-family="Segoe UI, Arial, sans-serif">60</text>
+  <text x="509" y="474" fill="#d7e2ea" font-size="18" font-family="Segoe UI, Arial, sans-serif">60</text>
+  <text x="623" y="474" fill="#d7e2ea" font-size="18" font-family="Segoe UI, Arial, sans-serif">60</text>
+  <g fill="none" stroke="#8ce09f" stroke-width="6">
+    <circle cx="928" cy="332" r="30"/>
+    <circle cx="928" cy="226" r="30"/>
+    <circle cx="1020" cy="279" r="30"/>
+    <circle cx="1020" cy="385" r="30"/>
+    <circle cx="928" cy="438" r="30"/>
+    <circle cx="836" cy="385" r="30"/>
+    <circle cx="836" cy="279" r="30"/>
+  </g>
+  <circle cx="928" cy="332" r="132" fill="none" stroke="#7d8ea1" stroke-width="3" stroke-dasharray="10 10"/>
+  <text x="214" y="190" fill="#d7e2ea" font-size="28" font-family="Segoe UI, Arial, sans-serif">Rectangular array with measured spacing</text>
+  <text x="786" y="190" fill="#d7e2ea" font-size="28" font-family="Segoe UI, Arial, sans-serif">Polar array for repeated features</text>
+  <rect x="132" y="110" width="320" height="50" rx="14" fill="#182631"/>
+  <text x="156" y="143" fill="#d7e2ea" font-size="18" font-family="Consolas, monospace">ARRAYRECT  Columns = 4</text>
+  <rect x="786" y="110" width="330" height="50" rx="14" fill="#182631"/>
+  <text x="810" y="143" fill="#d7e2ea" font-size="18" font-family="Consolas, monospace">ARRAYPOLAR  Items = 7</text>
+</svg>
