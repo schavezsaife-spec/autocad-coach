@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#eef6f9"/>
+  <rect x="70" y="70" width="1060" height="660" rx="34" fill="#ffffff" stroke="#d5e4eb" stroke-width="6"/>
+  <text x="110" y="135" font-family="Segoe UI, Arial, sans-serif" font-size="42" fill="#15384d" font-weight="700">Car Outline</text>
+  <text x="110" y="178" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#617481">A clean profile project for practicing arcs, proportion, and trim.</text>
+  <path d="M240 500 C300 500 340 430 400 410 L570 390 C630 300 770 300 840 390 L930 410 C980 420 1020 460 1025 500" fill="none" stroke="#2d6d86" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M325 500 C335 445 390 420 445 420" fill="none" stroke="#2d6d86" stroke-width="12" stroke-linecap="round"/>
+  <path d="M720 420 C780 420 835 448 845 500" fill="none" stroke="#2d6d86" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="445" cy="500" r="52" fill="none" stroke="#7db9cf" stroke-width="10"/>
+  <circle cx="790" cy="500" r="52" fill="none" stroke="#7db9cf" stroke-width="10"/>
+  <rect x="760" y="255" width="270" height="300" rx="24" fill="#f8fbfd" stroke="#d7e7ee" stroke-width="4"/>
+  <text x="795" y="315" font-family="Segoe UI, Arial, sans-serif" font-size="30" fill="#1c5772" font-weight="700">Project flow</text>
+  <text x="795" y="370" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#5f7281">1. Sketch body outline</text>
+  <text x="795" y="415" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#5f7281">2. Add roof arc</text>
+  <text x="795" y="460" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#5f7281">3. Shape wheel wells</text>
+  <text x="795" y="505" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#5f7281">4. Trim cleanup</text>
+</svg>

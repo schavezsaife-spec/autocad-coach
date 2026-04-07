@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <rect width="1400" height="900" fill="#18252f"/>
+  <rect x="28" y="28" width="1344" height="844" rx="28" fill="#101a21" stroke="#334956" stroke-width="6"/>
+  <rect x="28" y="28" width="1344" height="62" rx="28" fill="#23343f"/>
+  <rect x="58" y="120" width="200" height="700" rx="18" fill="#17242d"/>
+  <rect x="286" y="120" width="1050" height="700" rx="18" fill="#0e161c"/>
+  <rect x="286" y="120" width="1050" height="88" rx="18" fill="#1c2c36"/>
+  <path d="M350 260 H1268" stroke="#3c5563" stroke-width="2" opacity="0.45"/>
+  <path d="M350 330 H1268" stroke="#3c5563" stroke-width="2" opacity="0.45"/>
+  <path d="M350 400 H1268" stroke="#3c5563" stroke-width="2" opacity="0.45"/>
+  <path d="M350 470 H1268" stroke="#3c5563" stroke-width="2" opacity="0.45"/>
+  <path d="M350 540 H1268" stroke="#3c5563" stroke-width="2" opacity="0.45"/>
+  <path d="M350 610 H1268" stroke="#3c5563" stroke-width="2" opacity="0.45"/>
+  <path d="M350 680 H1268" stroke="#3c5563" stroke-width="2" opacity="0.45"/>
+  <path d="M410 230 V780" stroke="#3c5563" stroke-width="2" opacity="0.45"/>
+  <path d="M500 230 V780" stroke="#3c5563" stroke-width="2" opacity="0.45"/>
+  <path d="M590 230 V780" stroke="#3c5563" stroke-width="2" opacity="0.45"/>
+  <path d="M680 230 V780" stroke="#3c5563" stroke-width="2" opacity="0.45"/>
+  <path d="M770 230 V780" stroke="#3c5563" stroke-width="2" opacity="0.45"/>
+  <path d="M860 230 V780" stroke="#3c5563" stroke-width="2" opacity="0.45"/>
+  <path d="M950 230 V780" stroke="#3c5563" stroke-width="2" opacity="0.45"/>
+  <path d="M1040 230 V780" stroke="#3c5563" stroke-width="2" opacity="0.45"/>
+  <path d="M1130 230 V780" stroke="#3c5563" stroke-width="2" opacity="0.45"/>
+  <path d="M1220 230 V780" stroke="#3c5563" stroke-width="2" opacity="0.45"/>
+  <text x="346" y="178" font-family="Segoe UI, Arial, sans-serif" font-size="34" fill="#eff8ff" font-weight="700">Hatch and Fill</text>
+  <rect x="420" y="300" width="360" height="250" rx="18" fill="none" stroke="#8fe8ff" stroke-width="10"/>
+  <path d="M430 515 L770 315" stroke="#ffc96b" stroke-width="6" opacity="0.8"/>
+  <path d="M430 555 L810 335" stroke="#ffc96b" stroke-width="6" opacity="0.8"/>
+  <path d="M470 555 L810 355" stroke="#ffc96b" stroke-width="6" opacity="0.8"/>
+  <text x="845" y="372" font-family="Segoe UI, Arial, sans-serif" font-size="28" fill="#eff8ff" font-weight="700">Apply hatch to closed areas</text>
+  <text x="845" y="420" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#8fb6c8">Useful for sections and material areas</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760">
+  <rect width="1280" height="760" fill="#1e262e"/>
+  <rect x="30" y="30" width="1220" height="700" rx="28" fill="#111c25"/>
+  <g stroke="#24394a" stroke-width="1">
+    <path d="M80 100H1200"/><path d="M80 150H1200"/><path d="M80 200H1200"/><path d="M80 250H1200"/><path d="M80 300H1200"/><path d="M80 350H1200"/><path d="M80 400H1200"/><path d="M80 450H1200"/><path d="M80 500H1200"/><path d="M80 550H1200"/><path d="M80 600H1200"/><path d="M80 650H1200"/>
+    <path d="M120 70V690"/><path d="M180 70V690"/><path d="M240 70V690"/><path d="M300 70V690"/><path d="M360 70V690"/><path d="M420 70V690"/><path d="M480 70V690"/><path d="M540 70V690"/><path d="M600 70V690"/><path d="M660 70V690"/><path d="M720 70V690"/><path d="M780 70V690"/><path d="M840 70V690"/><path d="M900 70V690"/><path d="M960 70V690"/><path d="M1020 70V690"/><path d="M1080 70V690"/><path d="M1140 70V690"/>
+  </g>
+  <path d="M304 542 L304 276 L726 276 L832 382 L832 542 Z" fill="none" stroke="#57c5ff" stroke-width="10" stroke-linejoin="round"/>
+  <circle cx="438" cy="408" r="34" fill="none" stroke="#8ce09f" stroke-width="8"/>
+  <circle cx="666" cy="408" r="34" fill="none" stroke="#8ce09f" stroke-width="8"/>
+  <line x1="304" y1="598" x2="832" y2="598" stroke="#f6c262" stroke-width="4"/>
+  <line x1="304" y1="582" x2="304" y2="614" stroke="#f6c262" stroke-width="4"/>
+  <line x1="832" y1="582" x2="832" y2="614" stroke="#f6c262" stroke-width="4"/>
+  <text x="540" y="588" fill="#d7e2ea" font-size="20" font-family="Segoe UI, Arial, sans-serif">120</text>
+  <line x1="894" y1="276" x2="894" y2="542" stroke="#f6c262" stroke-width="4"/>
+  <line x1="878" y1="276" x2="910" y2="276" stroke="#f6c262" stroke-width="4"/>
+  <line x1="878" y1="542" x2="910" y2="542" stroke="#f6c262" stroke-width="4"/>
+  <text x="916" y="420" fill="#d7e2ea" font-size="20" font-family="Segoe UI, Arial, sans-serif">68</text>
+  <text x="272" y="660" fill="#d7e2ea" font-size="28" font-family="Segoe UI, Arial, sans-serif">Bracket plate project with dimensions, holes, and chamfered corner</text>
+</svg>

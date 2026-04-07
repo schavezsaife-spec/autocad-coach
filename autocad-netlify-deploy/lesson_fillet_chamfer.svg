@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760">
+  <rect width="1280" height="760" fill="#202830"/>
+  <rect x="18" y="18" width="1244" height="724" rx="24" fill="#29333d"/>
+  <rect x="18" y="18" width="1244" height="50" rx="24" fill="#1b2229"/>
+  <circle cx="54" cy="43" r="8" fill="#f08f7a"/>
+  <circle cx="78" cy="43" r="8" fill="#e4c46a"/>
+  <circle cx="102" cy="43" r="8" fill="#7fd1aa"/>
+  <text x="142" y="49" fill="#b8c4cf" font-size="22" font-family="Segoe UI, Arial, sans-serif">AutoCAD Coach | FILLET + CHAMFER</text>
+  <rect x="44" y="98" width="1192" height="604" rx="22" fill="#0f1922"/>
+  <g stroke="#203647" stroke-width="1">
+    <path d="M84 138H1196"/>
+    <path d="M84 188H1196"/>
+    <path d="M84 238H1196"/>
+    <path d="M84 288H1196"/>
+    <path d="M84 338H1196"/>
+    <path d="M84 388H1196"/>
+    <path d="M84 438H1196"/>
+    <path d="M84 488H1196"/>
+    <path d="M84 538H1196"/>
+    <path d="M84 588H1196"/>
+    <path d="M84 638H1196"/>
+    <path d="M144 118V678"/>
+    <path d="M204 118V678"/>
+    <path d="M264 118V678"/>
+    <path d="M324 118V678"/>
+    <path d="M384 118V678"/>
+    <path d="M444 118V678"/>
+    <path d="M504 118V678"/>
+    <path d="M564 118V678"/>
+    <path d="M624 118V678"/>
+    <path d="M684 118V678"/>
+    <path d="M744 118V678"/>
+    <path d="M804 118V678"/>
+    <path d="M864 118V678"/>
+    <path d="M924 118V678"/>
+    <path d="M984 118V678"/>
+    <path d="M1044 118V678"/>
+    <path d="M1104 118V678"/>
+  </g>
+  <text x="228" y="168" fill="#d7e2ea" font-size="28" font-family="Segoe UI, Arial, sans-serif">Rounded corner with FILLET</text>
+  <path d="M264 540 V280 H426" fill="none" stroke="#57c5ff" stroke-width="10"/>
+  <path d="M264 540 V344 A84 84 0 0 1 348 260 H426" fill="none" stroke="#8ce09f" stroke-width="10"/>
+  <circle cx="264" cy="540" r="10" fill="#f6c262"/>
+  <circle cx="426" cy="260" r="10" fill="#f6c262"/>
+  <text x="196" y="590" fill="#9fb1bf" font-size="20" font-family="Segoe UI, Arial, sans-serif">Radius smooths sharp intersections.</text>
+  <text x="772" y="168" fill="#d7e2ea" font-size="28" font-family="Segoe UI, Arial, sans-serif">Beveled corner with CHAMFER</text>
+  <path d="M782 540 V280 H984" fill="none" stroke="#57c5ff" stroke-width="10"/>
+  <path d="M782 540 V366 L868 280 H984" fill="none" stroke="#f6c262" stroke-width="10"/>
+  <text x="732" y="590" fill="#9fb1bf" font-size="20" font-family="Segoe UI, Arial, sans-serif">Chamfer cuts a flat angled edge.</text>
+  <rect x="144" y="110" width="286" height="50" rx="14" fill="#182631"/>
+  <text x="168" y="143" fill="#d7e2ea" font-size="18" font-family="Consolas, monospace">FILLET  Radius = 12</text>
+  <rect x="744" y="110" width="318" height="50" rx="14" fill="#182631"/>
+  <text x="768" y="143" fill="#d7e2ea" font-size="18" font-family="Consolas, monospace">CHAMFER  Dist1=10  Dist2=10</text>
+</svg>
