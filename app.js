@@ -345,10 +345,11 @@ function setProfileFeedback(message, tone = 'muted') {
 }
 function resolveAssetPath(src) {
   if (!src) return '';
+  const prefixed = src.startsWith('http') || src.startsWith('data:') || src.startsWith('/') || src.startsWith('img/') ? src : `img/${src}`;
   try {
-    return new URL(src, window.location.href).href;
+    return new URL(prefixed, window.location.href).href;
   } catch (error) {
-    return src;
+    return prefixed;
   }
 }
 function openLightbox(src, alt, caption = '') {
@@ -436,9 +437,10 @@ function renderSelectedLesson() {
   document.getElementById('lessonVisualFallback').classList.toggle('hidden', hasImage || !state.showVisuals);
   if (hasImage) {
     const img = document.getElementById('stepImage');
-    img.src = step.image;
+    const imagePath = resolveAssetPath(step.image);
+    img.src = imagePath;
     img.alt = `${lesson.title} step ${state.lessonStepIndex + 1}`;
-    img.dataset.lightboxSrc = step.image;
+    img.dataset.lightboxSrc = imagePath;
     img.dataset.lightboxAlt = img.alt;
     img.dataset.lightboxCaption = `${step.text} ${step.afterLabel || ''}`.trim();
     document.getElementById('beforeLabel').textContent = step.beforeLabel || 'Before state';
@@ -459,7 +461,7 @@ function renderProjects() {
   document.getElementById('projectDescription').textContent = project.description;
   document.getElementById('projectSkills').innerHTML = project.skills.map((skill) => `<span class="pill">${skill}</span>`).join('');
   document.getElementById('showProjectVisualsToggle').checked = state.showProjectVisuals;
-  document.getElementById('projectSteps').innerHTML = project.steps.map((step, index) => `<article class="project-step"><div class="step-number">${index + 1}</div><div class="project-step-body"><h4>Step ${index + 1}</h4><p class="muted">${step.text}</p>${state.showProjectVisuals ? `<img class="project-step-image lightbox-trigger" src="${step.image}" alt="${project.title} step ${index + 1} visual" data-lightbox-src="${step.image}" data-lightbox-alt="${project.title} step ${index + 1} visual" data-lightbox-caption="${step.caption}"><p class="project-caption">${step.caption}</p>` : ''}</div></article>`).join('');
+  document.getElementById('projectSteps').innerHTML = project.steps.map((step, index) => `<article class="project-step"><div class="step-number">${index + 1}</div><div class="project-step-body"><h4>Step ${index + 1}</h4><p class="muted">${step.text}</p>${state.showProjectVisuals ? `<img class="project-step-image lightbox-trigger" src="${resolveAssetPath(step.image)}" alt="${project.title} step ${index + 1} visual" data-lightbox-src="${resolveAssetPath(step.image)}" data-lightbox-alt="${project.title} step ${index + 1} visual" data-lightbox-caption="${step.caption}"><p class="project-caption">${step.caption}</p>` : ''}</div></article>`).join('');
   const btn = document.getElementById('completeProjectBtn');
   const resetProjectButton = document.getElementById('resetProjectBtn');
   const done = state.completedProjects.includes(project.title);
