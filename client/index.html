@@ -1,0 +1,476 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AutoCAD Coach — Sofia Chavez Saife</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ── Mobile top bar (hidden on desktop) ─────────────────────────── -->
+  <div class="mobile-topbar">
+    <button class="hamburger-btn" id="sidebarToggle" aria-label="Open navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <span class="mobile-brand">AutoCAD Coach</span>
+  </div>
+
+  <!-- ── Tap-to-close scrim ─────────────────────────────────────────── -->
+  <div class="sidebar-scrim" id="sidebarScrim"></div>
+
+  <div class="desktop-app">
+
+    <!-- ════════════════════════════ SIDEBAR ════════════════════════════ -->
+    <aside class="sidebar" id="sidebar">
+      <button class="sidebar-close" id="sidebarClose" aria-label="Close navigation">✕</button>
+
+      <div class="brand-block">
+        <img src="img/sofia_chavez_saife_logo.svg" alt="AutoCAD Coach" class="brand-logo">
+        <div>
+          <p class="eyebrow">Created by</p>
+          <h1 class="brand-name">Sofia Chavez Saife</h1>
+          <p class="brand-sub">AutoCAD Coach</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="App sections">
+        <button class="nav-btn active" data-tab-target="home">
+          <span class="nav-icon">⌂</span><span>Home</span>
+        </button>
+        <button class="nav-btn" data-tab-target="dashboard">
+          <span class="nav-icon">▦</span><span>Dashboard</span>
+        </button>
+        <button class="nav-btn" data-tab-target="learn">
+          <span class="nav-icon">◈</span><span>Lessons</span>
+        </button>
+        <button class="nav-btn" data-tab-target="projects">
+          <span class="nav-icon">◻</span><span>Projects</span>
+        </button>
+        <button class="nav-btn" data-tab-target="quiz">
+          <span class="nav-icon">◇</span><span>Quiz</span>
+        </button>
+        <button class="nav-btn" data-tab-target="profile">
+          <span class="nav-icon">◯</span><span>Profile</span>
+        </button>
+        <button class="nav-btn" data-tab-target="stuck">
+          <span class="nav-icon">⚠</span><span>Troubleshoot</span>
+        </button>
+        <button class="nav-btn" data-tab-target="chat">
+          <span class="nav-icon">◈</span><span>AI Chat</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-progress-card">
+        <p class="eyebrow">Your progress</p>
+        <div class="stat-grid">
+          <div class="stat-cell">
+            <strong id="lessonsCompleteValue">0/0</strong>
+            <span>Lessons</span>
+          </div>
+          <div class="stat-cell">
+            <strong id="xpValue">0</strong>
+            <span>XP</span>
+          </div>
+          <div class="stat-cell">
+            <strong id="streakValue">0d</strong>
+            <span>Streak</span>
+          </div>
+          <div class="stat-cell">
+            <strong id="progressValue">0%</strong>
+            <span>Done</span>
+          </div>
+        </div>
+        <div class="progress-track" title="Overall progress">
+          <div class="progress-fill" id="progressBarFill" style="width:0%"></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ═══════════════════════════ WORKSPACE ═══════════════════════════ -->
+    <section class="workspace">
+      <header class="topbar">
+        <div class="topbar-left">
+          <p class="eyebrow" id="topbarKicker">Beginner AutoCAD learning app</p>
+          <h2 id="workspaceTitle">Home</h2>
+        </div>
+        <div class="topbar-actions">
+          <button class="btn-ghost" data-action="goto-next-lesson">Next lesson →</button>
+          <button class="btn-primary" data-tab-target="projects">Open projects</button>
+        </div>
+      </header>
+
+      <main class="workspace-content">
+
+        <!-- ── HOME ──────────────────────────────────────────────────── -->
+        <section class="tab-panel active" id="homePanel">
+
+          <div class="home-hero">
+            <div class="hero-copy">
+              <p class="eyebrow accent-text">Desktop learning studio</p>
+              <h2 class="hero-title">Learn AutoCAD with guided lessons, visual practice, and beginner-friendly projects.</h2>
+              <p class="hero-sub">From your first command to clean technical drawings — visual walkthroughs, quizzes, troubleshooting, and project-based practice all in one place.</p>
+              <div class="btn-row">
+                <button class="btn-primary btn-lg" data-action="goto-next-lesson">Continue learning</button>
+                <button class="btn-ghost btn-lg" data-tab-target="learn">Browse lessons</button>
+              </div>
+            </div>
+            <div class="hero-visual">
+              <img src="img/home_desktop_autocad.svg" alt="AutoCAD Coach visual">
+            </div>
+          </div>
+
+          <div class="home-stats-row">
+            <div class="home-stat-card">
+              <span class="home-stat-icon">◈</span>
+              <strong id="homeLessonsVal">0/0</strong>
+              <span>Lessons complete</span>
+            </div>
+            <div class="home-stat-card">
+              <span class="home-stat-icon accent">✦</span>
+              <strong id="homeXpVal">0</strong>
+              <span>XP earned</span>
+            </div>
+            <div class="home-stat-card">
+              <span class="home-stat-icon warm">◉</span>
+              <strong id="homeStreakVal">0</strong>
+              <span>Day streak</span>
+            </div>
+            <div class="home-stat-card">
+              <span class="home-stat-icon cool">▣</span>
+              <strong id="homeProgressVal">0%</strong>
+              <span>Overall progress</span>
+            </div>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <p class="feature-kicker">What it teaches</p>
+              <h3>From basics to early 3D</h3>
+              <p class="muted">Lessons cover navigation, sketching, editing, precision, layers, annotation, dimensions, hatch, blocks, arrays, detailing, and 3D basics.</p>
+            </article>
+            <article class="feature-card">
+              <p class="feature-kicker">Why it helps</p>
+              <h3>Built for beginners</h3>
+              <p class="muted">Visual guidance, checkpoints, step-by-step projects, and screenshot-style mockups keep the learning path approachable for students and first-time users.</p>
+            </article>
+            <article class="feature-card">
+              <p class="feature-kicker">Who it's for</p>
+              <h3>Students and new designers</h3>
+              <p class="muted">A good fit for students interested in engineering, drafting, product design, or learning AutoCAD for the first time.</p>
+            </article>
+          </div>
+
+          <section class="panel info-panel">
+            <p class="eyebrow">Quick help</p>
+            <h3>How to use the app</h3>
+            <ul class="check-list">
+              <li>Start in Lessons and complete one skill at a time.</li>
+              <li>Turn on Show visuals for screenshot-style guidance.</li>
+              <li>Use Projects after a few lessons to practice what you learned.</li>
+              <li>Create an account in Profile to sync progress across devices.</li>
+              <li>Use Diagnose or Troubleshoot if a command stops working.</li>
+            </ul>
+          </section>
+
+        </section>
+
+        <!-- ── DASHBOARD ─────────────────────────────────────────────── -->
+        <section class="tab-panel" id="dashboardPanel">
+          <div class="two-col-layout">
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <p class="eyebrow">Search</p>
+                  <h3>Find lessons fast</h3>
+                </div>
+                <input id="lessonSearch" class="form-input search-input" type="search" placeholder="Search lessons, tools, topics…">
+              </div>
+              <div class="card-grid" id="dashboardLessonGrid"></div>
+            </section>
+            <aside class="col-stack">
+              <section class="panel">
+                <p class="eyebrow">Recommended next</p>
+                <h3 id="nextLessonTitle">Choose a lesson</h3>
+                <p id="nextLessonDescription" class="muted"></p>
+                <button class="btn-primary btn-sm mt-12" data-action="goto-next-lesson">Continue</button>
+              </section>
+              <section class="panel">
+                <p class="eyebrow">Today's path</p>
+                <ul class="check-list mt-8">
+                  <li>Finish one lesson</li>
+                  <li>Practice one project step</li>
+                  <li>Check understanding with a quiz</li>
+                  <li>Use Diagnose if a command fails</li>
+                </ul>
+              </section>
+            </aside>
+          </div>
+        </section>
+
+        <!-- ── LESSONS ───────────────────────────────────────────────── -->
+        <section class="tab-panel" id="learnPanel">
+          <div class="learn-layout">
+            <aside class="panel lesson-list-panel">
+              <div class="panel-header">
+                <div>
+                  <p class="eyebrow">Lesson map</p>
+                  <h3>One skill at a time</h3>
+                </div>
+              </div>
+              <div id="lessonList" class="list-stack"></div>
+            </aside>
+            <section class="panel lesson-main">
+              <div class="lesson-head">
+                <div>
+                  <p id="lessonMeta" class="eyebrow"></p>
+                  <h3 id="lessonTitle"></h3>
+                  <p id="lessonDescription" class="muted lesson-desc"></p>
+                  <p id="lessonObjective" class="objective-label"></p>
+                </div>
+                <div class="btn-row">
+                  <button id="resetLessonBtn" class="btn-ghost btn-sm">Reset</button>
+                  <button id="completeLessonBtn" class="btn-primary btn-sm">Mark complete</button>
+                </div>
+              </div>
+              <div class="lesson-body">
+                <article class="lesson-guide">
+                  <div class="step-card">
+                    <div class="step-meta">
+                      <span class="step-count-label" id="stepCountLabel">Step 1</span>
+                      <label class="toggle-label">
+                        <input type="checkbox" id="showVisualsToggle" checked>
+                        <span class="toggle-track"><span class="toggle-thumb"></span></span>
+                        <span>Visuals</span>
+                      </label>
+                    </div>
+                    <p id="currentStepText" class="step-text"></p>
+                    <div id="lessonVisualArea" class="visual-area">
+                      <div class="visual-labels">
+                        <span class="visual-badge before" id="beforeLabel"></span>
+                        <span class="visual-badge after" id="afterLabel"></span>
+                      </div>
+                      <img id="stepImage" class="step-image lightbox-trigger" alt="">
+                      <p id="mistakeLabel" class="mistake-hint"></p>
+                    </div>
+                    <div id="lessonVisualFallback" class="visual-fallback hidden">
+                      <p class="muted">Enable visuals to see screenshot-style guidance.</p>
+                    </div>
+                  </div>
+                  <div class="step-nav">
+                    <button id="prevStepBtn" class="btn-ghost btn-sm">← Back</button>
+                    <button id="nextStepBtn" class="btn-primary btn-sm">Next step →</button>
+                  </div>
+                </article>
+                <aside class="lesson-sidebar">
+                  <article class="info-card">
+                    <h4>Try this</h4>
+                    <p id="lessonTryThis" class="muted"></p>
+                  </article>
+                  <article class="info-card">
+                    <h4>Common mistake</h4>
+                    <p id="lessonMistake" class="muted"></p>
+                  </article>
+                  <article class="info-card accent-card">
+                    <h4>Why this matters</h4>
+                    <p class="muted">These commands reappear inside projects — each lesson builds toward real workflow confidence.</p>
+                  </article>
+                </aside>
+              </div>
+              <div class="next-lesson-strip hidden" id="nextLessonStrip">
+                <p>Lesson complete!</p>
+                <button class="btn-primary btn-sm" data-action="goto-next-lesson">Start next lesson →</button>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <!-- ── PROJECTS ──────────────────────────────────────────────── -->
+        <section class="tab-panel" id="projectsPanel">
+          <div class="learn-layout">
+            <aside class="panel lesson-list-panel">
+              <div class="panel-header">
+                <div>
+                  <p class="eyebrow">Project list</p>
+                  <h3>Practice what you learned</h3>
+                </div>
+              </div>
+              <div id="projectList" class="list-stack"></div>
+            </aside>
+            <section class="panel">
+              <p id="projectMeta" class="eyebrow"></p>
+              <h3 id="projectTitle"></h3>
+              <p id="projectDescription" class="muted lesson-desc"></p>
+              <div id="projectSkills" class="pill-row mt-12"></div>
+              <div class="project-controls">
+                <label class="toggle-label">
+                  <input type="checkbox" id="showProjectVisualsToggle">
+                  <span class="toggle-track"><span class="toggle-thumb"></span></span>
+                  <span>Show visuals</span>
+                </label>
+                <div class="btn-row">
+                  <button id="resetProjectBtn" class="btn-ghost btn-sm">Reset</button>
+                  <button id="completeProjectBtn" class="btn-primary btn-sm">Mark complete</button>
+                </div>
+              </div>
+              <div id="projectSteps" class="project-steps"></div>
+            </section>
+          </div>
+        </section>
+
+        <!-- ── QUIZ ──────────────────────────────────────────────────── -->
+        <section class="tab-panel" id="quizPanel">
+          <section class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Knowledge check</p>
+                <h3>Check your understanding</h3>
+              </div>
+              <button class="btn-ghost btn-sm" id="resetQuizBtn">Reset answers</button>
+            </div>
+            <div id="quizList" class="quiz-stack"></div>
+          </section>
+        </section>
+
+        <!-- ── PROFILE ───────────────────────────────────────────────── -->
+        <section class="tab-panel" id="profilePanel">
+          <div class="profile-grid">
+
+            <!-- Auth panel — sign in / sign up -->
+            <section class="panel auth-panel" id="profileAuthSection">
+              <p class="eyebrow">Your account</p>
+              <h3>Sign in or create an account</h3>
+              <div class="auth-tabs">
+                <button class="auth-tab active" id="signInTabBtn">Sign in</button>
+                <button class="auth-tab" id="signUpTabBtn">Create account</button>
+              </div>
+
+              <!-- Sign in form -->
+              <div id="signInForm" class="auth-form">
+                <label class="field">
+                  <span>Email</span>
+                  <input id="profileEmailInput" class="form-input" type="email" placeholder="you@example.com">
+                </label>
+                <label class="field">
+                  <span>Password</span>
+                  <div class="password-row">
+                    <input id="profilePasswordInput" class="form-input" type="password" placeholder="Your password">
+                    <label class="toggle-label small-toggle">
+                      <input type="checkbox" id="showPasswordToggle">
+                      <span class="toggle-track sm"><span class="toggle-thumb"></span></span>
+                    </label>
+                  </div>
+                </label>
+                <button class="btn-primary" id="saveProfileBtn">Sign in</button>
+                <p id="profileFeedback" class="form-feedback">Sign in to sync your progress across devices.</p>
+              </div>
+
+              <!-- Sign up form (hidden by default) -->
+              <div id="signUpForm" class="auth-form hidden">
+                <label class="field">
+                  <span>Name</span>
+                  <input id="profileNameInput" class="form-input" type="text" placeholder="Sofia Chavez Saife">
+                </label>
+                <label class="field">
+                  <span>Email</span>
+                  <input id="regEmailInput" class="form-input" type="email" placeholder="you@example.com">
+                </label>
+                <label class="field">
+                  <span>Password</span>
+                  <input id="regPasswordInput" class="form-input" type="password" placeholder="Min. 6 characters">
+                </label>
+                <label class="field">
+                  <span>Learning goal</span>
+                  <input id="profileGoalInput" class="form-input" type="text" placeholder="Engineering drafting, product design…">
+                </label>
+                <button class="btn-primary" id="signUpBtn">Create account</button>
+                <p id="signUpFeedback" class="form-feedback"></p>
+              </div>
+            </section>
+
+            <!-- Profile summary — shown when signed in -->
+            <section class="panel profile-summary-panel" id="profileLoggedSection">
+              <div class="profile-avatar-row">
+                <div class="profile-avatar" id="profileAvatar">?</div>
+                <div>
+                  <h3 id="profileNameDisplay">Not signed in</h3>
+                  <p id="profileEmailDisplay" class="muted">—</p>
+                </div>
+                <button class="btn-ghost btn-sm ml-auto" id="logoutProfileBtn">Sign out</button>
+              </div>
+              <div class="summary-rows">
+                <div class="summary-row"><span>Goal</span><strong id="profileGoalDisplay">—</strong></div>
+                <div class="summary-row"><span>Status</span><strong id="profileStatusDisplay">Guest</strong></div>
+                <div class="summary-row"><span>Password</span><strong id="profilePasswordDisplay">—</strong></div>
+              </div>
+              <button class="btn-ghost btn-sm danger-btn mt-12" id="clearProfileBtn">Clear local data</button>
+            </section>
+
+          </div>
+        </section>
+
+        <!-- ── TROUBLESHOOT ──────────────────────────────────────────── -->
+        <section class="tab-panel" id="stuckPanel">
+          <section class="panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Help centre</p>
+                <h3>Fast fixes for common problems</h3>
+              </div>
+            </div>
+            <div id="troubleshootingGrid" class="card-grid mt-16"></div>
+          </section>
+        </section>
+
+        <!-- ── AI CHAT (Diagnose + Tutor combined) ──────────────────── -->
+        <section class="tab-panel" id="chatPanel">
+          <div class="chat-wrap">
+            <div class="chat-topbar panel">
+              <div>
+                <p class="eyebrow accent-text">Powered by Puter.js · Free &amp; unlimited</p>
+                <h3>AutoCAD Tutor &amp; Diagnose</h3>
+                <p class="muted">Ask any beginner question or describe a problem to get instant help.</p>
+              </div>
+              <button class="btn-ghost btn-sm" id="clearChatBtn">Clear chat</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+              <div class="chat-empty" id="chatEmpty">
+                <div class="chat-empty-icon">◈</div>
+                <p class="chat-empty-title">How can I help you?</p>
+                <p class="muted">Try a suggestion or type your own question below.</p>
+                <div class="suggestion-grid" id="suggestionChips"></div>
+              </div>
+            </div>
+            <div class="chat-input-bar">
+              <textarea id="chatInput" class="chat-input" placeholder="Ask a question or describe a problem… (Enter to send)" rows="1"></textarea>
+              <button class="btn-primary chat-send-btn" id="sendChatBtn" aria-label="Send">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </section><!-- /workspace -->
+  </div><!-- /desktop-app -->
+
+  <!-- ── Lightbox ───────────────────────────────────────────────────── -->
+  <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="Expanded visual">
+    <div class="lightbox-backdrop" data-close-lightbox="true"></div>
+    <div class="lightbox-panel">
+      <button id="closeLightboxBtn" class="btn-ghost btn-sm lightbox-close">✕ Close</button>
+      <img id="lightboxImage" alt="Expanded visual">
+      <p id="lightboxCaption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- ── Puter.js (free AI — no API key needed) ─────────────────────── -->
+  <script src="https://js.puter.com/v2/"></script>
+  <!-- ── Supabase CDN ───────────────────────────────────────────────── -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="services.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
