@@ -783,6 +783,15 @@ function wireEvents() {
     if (result.ok) { const saved = await svc.storage.readState(); if (saved) Object.assign(state, saved); render(); }
   });
 
+  document.getElementById('googleSignInBtn').addEventListener('click', async () => {
+    const fb = document.getElementById('profileFeedback');
+    fb.textContent = 'Opening Google sign-in...';
+    fb.className = 'form-feedback';
+    const result = await window.AutoCADCoachServices.auth.signInWithGoogle();
+    fb.textContent = result.message;
+    fb.className = `form-feedback ${result.ok ? 'success' : 'error'}`;
+  });
+
   // Sign up
   document.getElementById('signUpBtn').addEventListener('click', async () => {
     const name = document.getElementById('profileNameInput').value.trim();

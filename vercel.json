@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "client/**", "use": "@vercel/static" },
+    { "src": "api/**/*.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/~oauth/initiate", "dest": "/api/oauth-initiate.js" },
+    { "src": "/img/(.*)", "dest": "/client/img/$1" },
+    { "src": "/(.*\\.(?:css|js|png|jpg|jpeg|gif|svg|webp|ico|json|txt|map))", "dest": "/client/$1" },
+    { "src": "/(.*)", "dest": "/client/index.html" }
+  ]
+}

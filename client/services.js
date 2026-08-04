@@ -4,20 +4,37 @@
 // The anon key is safe to expose here — row-level security handles access control.
 
 (function () {
-  const SUPABASE_URL     = 'https://zxxrmxsumnpczevpbuwu.supabase.co';
+  const SUPABASE_URL     = 'https://tttxiqizxzjidzzggglp.supabase.co';
   const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
   const LOCAL_KEY        = 'autocad-coach-progress-v4';
+  const SUPABASE_CONFIGURED = SUPABASE_URL.includes('.supabase.co') &&
+    SUPABASE_ANON_KEY &&
+    SUPABASE_ANON_KEY !== 'YOUR_SUPABASE_ANON_KEY';
 
-  const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  const sb = SUPABASE_CONFIGURED && window.supabase
+    ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+    : null;
+
+  function requireSupabase() {
+    if (sb) return null;
+    return {
+      ok: false,
+      message: 'Supabase is not configured yet. Add the project anon key in client/services.js first.',
+    };
+  }
 
   // ── Auth ──────────────────────────────────────────────────────────────────
 
   async function getUser() {
+    if (!sb) return null;
     const { data } = await sb.auth.getUser();
     return data?.user ?? null;
   }
 
   async function signUp({ name, email, password, goal }) {
+    const missingConfig = requireSupabase();
+    if (missingConfig) return missingConfig;
+
     if (!name || !email || !password) {
       return { ok: false, message: 'Name, email, and password are all required.' };
     }
@@ -43,6 +60,9 @@
   }
 
   async function signIn({ email, password }) {
+    const missingConfig = requireSupabase();
+    if (missingConfig) return missingConfig;
+
     if (!email || !password) {
       return { ok: false, message: 'Enter your email and password.' };
     }
@@ -53,11 +73,27 @@
   }
 
   async function signOut() {
+    if (!sb) return { ok: true, message: 'Signed out locally.' };
     await sb.auth.signOut();
     return { ok: true, message: 'Signed out.' };
   }
 
+  async function signInWithGoogle() {
+    const missingConfig = requireSupabase();
+    if (missingConfig) return missingConfig;
+
+    const { error } = await sb.auth.signInWithOAuth({
+      provider: 'google',
+      options: {
+        redirectTo: `${window.location.origin}/`,
+      },
+    });
+    if (error) return { ok: false, message: error.message };
+    return { ok: true, message: 'Redirecting to Google...' };
+  }
+
   function onAuthStateChange(callback) {
+    if (!sb) return { data: { subscription: { unsubscribe() {} } } };
     return sb.auth.onAuthStateChange(callback);
   }
 
@@ -118,7 +154,7 @@
   // ── Expose ────────────────────────────────────────────────────────────────
 
   window.AutoCADCoachServices = {
-    auth:    { getUser, signUp, signIn, signOut, onAuthStateChange },
+    auth:    { getUser, signUp, signIn, signOut, signInWithGoogle, onAuthStateChange },
     storage: { readState, writeState },
     client:  sb,
   };
